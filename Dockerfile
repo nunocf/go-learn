@@ -4,6 +4,7 @@ WORKDIR /go
 
 COPY ./cards .
 
-RUN go build
+# RUN go build
 
-CMD ["go", "run", "./main.go" ]
+CMD ["go", "run", "main.go", "deck.go" ]
+

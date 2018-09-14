@@ -1,19 +1,9 @@
 package main
 
-import (
-	"fmt"
-)
-
 func main() {
-	cards := []string{"Ace of Spades", newCard()}
-	cards = append(cards, "Six of Hearts")
+	cards := newDeck()
 
-	for i, card := range cards {
-		fmt.Println(i, card)
-	}
+	cards.shuffle()
 
-}
-
-func newCard() string {
-	return "Five of Diamonds"
+	cards.print()
 }
